@@ -1215,6 +1215,10 @@ footer a {
     text-decoration: none;
 }
 
+footer a:hover, footer a:visited {
+    color: #eee;
+}
+
 footer li img {
     width: 100px;
 }

@@ -1037,7 +1037,7 @@ header nav li a {
     position: absolute;
     z-index: 1;
     text-align: center;
-    top: 90px;
+    top: 120px;
 }
 
 #slogan h2 {
@@ -1056,7 +1056,7 @@ header nav li a {
     padding: 0 20px;
     background: transparent;
     display: inline-block;
-    vertical-align: 5px;
+    vertical-align: 20px;
     padding-bottom: 20px;
 }
 
@@ -1136,6 +1136,7 @@ header nav li a {
     display: inline-block;
     padding: 0 15px 0 0;
     font-family: 'Aleo', serif;
+    vertical-align: 20px;
 }
 
 #featured hr, #gallery hr {
@@ -1189,6 +1190,11 @@ footer {
     background: #3b3b3b;
     margin-top: 100px;
     padding: 30px 0;
+}
+
+footer.entry-footer {
+    padding: 10px;
+    background: #3b3b3b;
 }
 
 footer:after {

@@ -70,30 +70,17 @@ get_header();
     <section id="featured">
         <h2>Featured Dish</h2><hr/>
         <ul>
+        <!-- Start the Loop -->
+        <?php $myquery = new WP_Query('category_name=items&posts_per_page=4'); ?>
+        <?php while ( $myquery->have_posts() ) : $myquery->the_post(); ?>
             <li>
-                <img src="images/plat-1.jpg">
-                <a href="#">Brochettes de poulet</a>
-                <span>$30</span>
-                <span class="rating"></span>
+                <?php the_post_thumbnail(); ?>
+                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                <span><?php echo get_post_meta($post->ID, 'Prix', true); ?></span>
+                <span class="star-<?php echo get_post_meta($post->ID, 'Note', true); ?> rating"></span>
             </li>
-            <li>
-                <img src="images/plat-2.jpg">
-                <a href="#">Nouilles aux champignons</a>
-                <span>$28</span>
-                <span class="rating"></span>
-            </li>
-            <li>
-                <img src="images/plat-3.jpg">
-                <a href="#">Muslix aux bananes</a>
-                <span>$18</span>
-                <span class="rating"></span>
-            </li>
-            <li>
-                <img src="images/plat-4.jpg">
-                <a href="#">Couscous aux légumes</a>
-                <span>$22</span>
-                <span class="rating"></span>
-            </li>
+		<?php endwhile; ?>
+
         </ul>
     </section>
 

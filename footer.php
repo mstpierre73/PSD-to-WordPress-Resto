@@ -38,6 +38,7 @@
                 <li><a href="http://marisestpierre.com/" target="_blank">&copy; Marise St-Pierre 2019</a></li>
                 <p>PSD from www.pixelhint.com</p>
             </ul>
+            <?php dynamic_sidebar('footer'); ?>
 		</div><!-- .wrapper -->
 	</footer>
 </div><!-- #page -->

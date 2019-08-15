@@ -755,13 +755,13 @@ a:hover, a:active {
 # Alignments
 --------------------------------------------------------------*/
 .alignleft {
-	display: inline;
+	display: block;
 	float: left;
 	margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
+	display: block;
 	float: right;
 	margin-left: 1.5em;
 }
@@ -771,6 +771,11 @@ a:hover, a:active {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
 }
 
 /*--------------------------------------------------------------
@@ -1192,9 +1197,13 @@ footer {
     padding: 30px 0;
 }
 
-footer.entry-footer {
+footer.entry-footer, .comment-meta {
     padding: 10px;
     background: #3b3b3b;
+}
+
+footer.entry-footer span {
+    padding: 10px;
 }
 
 footer:after {
@@ -1235,6 +1244,27 @@ footer p {
 
 #credits {
     display: none;
+}
+
+#post-content {
+    float: left;
+    width: 70%;
+    clear: both;
+    display: block;
+}
+
+#sidebar {
+    float: right;
+    width: 26%;
+    padding: 1%;
+    background: #eee;
+    margin-top: 20px;
+    display: block;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
 }
 
 /*Media queries*/
@@ -1392,7 +1422,7 @@ footer p {
     .burger-nav {
         display: block;
         position: absolute;
-        top: 5px;
+        top: 45px;
         height: 40px;
         width: 100%;
         background: url(images/menu-button.png) no-repeat 98% center;
